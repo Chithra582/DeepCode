@@ -1,0 +1,100 @@
+{
+  "paths": {
+    "code_base_path": "D:/Documents/GitHub/Code-Agent/examples/input/paper1/code_base",
+    "output_dir": "D:/Documents/GitHub/Code-Agent/examples/input/paper1/indexes"
+  },
+  "file_analysis": {
+    "supported_extensions": [
+      ".py",
+      ".js",
+      ".ts",
+      ".java",
+      ".cpp",
+      ".c",
+      ".h",
+      ".hpp",
+      ".cs",
+      ".php",
+      ".rb",
+      ".go",
+      ".rs",
+      ".scala",
+      ".kt",
+      ".swift",
+      ".r",
+      ".sql",
+      ".sh",
+      ".bat",
+      ".ps1",
+      ".yaml",
+      ".yml",
+      ".json",
+      ".xml",
+      ".toml"
+    ],
+    "skip_directories": [
+      "__pycache__",
+      "node_modules",
+      "target",
+      "build",
+      "dist",
+      "venv",
+      "env",
+      ".git",
+      ".svn",
+      ".hg",
+      "coverage",
+      ".pytest_cache",
+      ".mypy_cache"
+    ],
+    "max_file_size": 1048576,
+    "max_content_length": 3000
+  },
+  "llm": {
+    "model_provider": "openai",
+    "max_tokens": 4000,
+    "temperature": 0.3,
+    "system_prompt": "You are a code analysis expert. Provide precise, structured analysis of code relationships and similarities.",
+    "request_delay": 0.1,
+    "max_retries": 3,
+    "retry_delay": 1.0
+  },
+  "relationships": {
+    "min_confidence_score": 0.3,
+    "high_confidence_threshold": 0.7,
+    "relationship_types": {
+      "direct_match": 1.0,
+      "partial_match": 0.8,
+      "reference": 0.6,
+      "utility": 0.4
+    }
+  },
+  "output": {
+    "json_indent": 2,
+    "ensure_ascii": false,
+    "generate_summary": true,
+    "generate_statistics": true,
+    "include_metadata": true,
+    "index_filename_pattern": "{repo_name}_index.json",
+    "summary_filename": "indexing_summary.json",
+    "stats_filename": "indexing_statistics.json"
+  },
+  "logging": {
+    "level": "INFO",
+    "log_to_file": true,
+    "log_file": "indexer.log",
+    "log_format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "performance": {
+    "enable_concurrent_analysis": true,
+    "max_concurrent_files": 5,
+    "enable_content_caching": false,
+    "max_cache_size": 100
+  },
+  "debug": {
+    "save_raw_responses": false,
+    "raw_responses_dir": "debug_responses",
+    "verbose_output": false,
+    "mock_llm_responses": false
+  }
+}

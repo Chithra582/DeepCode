@@ -1,0 +1,24 @@
+spec_version: "0.1.0"
+name: deepcode-agent
+version: 0.1.0
+description: Open agentic coding system by HKU Data Intelligence Lab for automated paper reproduction, multi-agent code generation, and repository indexing.
+license: MIT
+author: HKU Data Intelligence Lab, Chithra582 & OpenGAP Contributors
+
+metadata:
+  domain: Developer Tools / Agentic Coding & Research Paper Code Reproduction
+  category: Developer Tools
+
+skills:
+  - research-paper-code-reproducer
+  - codebase-relationship-indexer
+  - multi-agent-planning-workflow
+  - document-segmentation-parser
+  - iterative-code-tester-refiner
+
+tools:
+  - paper-pdf-analyzer
+  - repository-graph-indexer
+  - implementation-workflow-orchestrator
+  - subcommand-terminal-runner
+  - reference-symbol-lookup

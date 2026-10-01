@@ -1,0 +1,14 @@
+name: subcommand-terminal-runner
+description: Executes project builds, test harnesses, and git commands in isolated
+  subprocess environments.
+input_schema:
+  type: object
+  properties:
+    command:
+      type: string
+      description: Shell command string to execute.
+    timeout_seconds:
+      type: integer
+      description: 'Execution timeout in seconds (default: 30).'
+  required:
+  - command

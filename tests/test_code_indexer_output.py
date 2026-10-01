@@ -22,7 +22,7 @@ if str(ROOT) not in sys.path:
 from tools.code_indexer import CodeIndexer
 
 _NON_ASCII = "工作流/代码索引.py"
-_SHIPPED_CONFIG = ROOT / "tools" / "indexer_config.yaml"
+_SHIPPED_CONFIG = ROOT / "tools" / "indexer_config.json"
 
 _STATS_ROW = {
     "analyzed_files": 1,
@@ -55,7 +55,7 @@ def _write(indexer: CodeIndexer, method: str) -> str:
 
 
 def test_shipped_config_requests_literal_utf8():
-    """``tools/indexer_config.yaml`` ships ``ensure_ascii: false``."""
+    """``tools/indexer_config.json`` ships ``ensure_ascii: false``."""
 
     import yaml
 

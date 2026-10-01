@@ -1,0 +1,15 @@
+name: repository-graph-indexer
+description: Maps semantic relationships between existing codebase files and target
+  project architectures.
+input_schema:
+  type: object
+  properties:
+    codebase_path:
+      type: string
+      description: Root path of the codebase to index.
+    output_dir:
+      type: string
+      description: Directory to store generated relationship indexes.
+  required:
+  - codebase_path
+  - output_dir

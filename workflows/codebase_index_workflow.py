@@ -286,7 +286,7 @@ project/
             Configuration dictionary
         """
         # Try to load existing configuration file
-        config_path = Path(__file__).parent.parent / "tools" / "indexer_config.yaml"
+        config_path = Path(__file__).parent.parent / "tools" / "indexer_config.json"
 
         try:
             if config_path.exists():

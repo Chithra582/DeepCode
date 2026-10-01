@@ -1,0 +1,15 @@
+name: implementation-workflow-orchestrator
+description: Drives phased multi-agent workflows across code synthesis, review, and
+  verification.
+input_schema:
+  type: object
+  properties:
+    workflow_phase:
+      type: string
+      description: 'Current phase: planning, implementation, or review.'
+    project_spec:
+      type: string
+      description: Specification text or plan file path.
+  required:
+  - workflow_phase
+  - project_spec

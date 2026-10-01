@@ -1,0 +1,15 @@
+name: reference-symbol-lookup
+description: Resolves symbol imports, class definitions, and function signatures across
+  indexed repositories.
+input_schema:
+  type: object
+  properties:
+    symbol_name:
+      type: string
+      description: Name of the class, function, or constant to look up.
+    index_dir:
+      type: string
+      description: Path to the pre-built repository index directory.
+  required:
+  - symbol_name
+  - index_dir
