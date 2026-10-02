@@ -1,5 +1,5 @@
 spec_version: "0.1.0"
-name: deepcode-agent
+name: deepcode
 version: 0.1.0
 description: Open agentic coding system by HKU Data Intelligence Lab for automated paper reproduction, multi-agent code generation, and repository indexing.
 license: MIT
